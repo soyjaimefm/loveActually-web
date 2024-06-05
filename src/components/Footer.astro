@@ -1,0 +1,24 @@
+---
+import menu from '../config/menu.json';
+---
+
+<!-- <footer
+  class="max-w-6xl p-2 flex justify-center items-center container mx-auto bg-laSoftGreen text-laBeige font-roxboroughCf"   -rotate-[30deg] 
+>
+  
+</footer> -->
+<footer class="bg-laSoftGreen text-laBeige font-roxboroughCf container mx-auto max-w-6xl py-6 px-4 md:px-8">
+  <div class="grid items-center justify-center grid-cols-4 md:grid-cols-3 gap-y-6 md:gap-16">
+    <div class="mx-auto w-24 sm:w-32 md:w-48 grid place-items-center justify-center aspect-square bg-center bg-contain bg-no-repeat bg-[url('/footer-shape.svg')]">
+      <div class="-rotate-[30deg] w-fit text-center text-xs md:text-base text-laRed">¡QUEREMOS<br>NUESTRA WEB!</div>
+    </div>
+    <div class="col-span-2 md:col-span-1">
+      <ul class="text-center text-sm sm:text-base md:text-lg">
+        {menu.footer.map((menuElement) => <li><a href={menuElement.url}>{menuElement.name}</a></li>)}
+      </ul>
+    </div>
+    <div class="flex justify-center">
+      <img class="w-32" src="/la-seal-softgreen.png" alt="">
+    </div>
+  </div>
+</footer>

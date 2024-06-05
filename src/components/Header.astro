@@ -1,0 +1,21 @@
+---
+import menu from '../config/menu.json';
+---
+
+<header
+  class="max-w-6xl p-2 flex justify-center items-center container mx-auto bg-laBeige text-laGreen font-roxboroughCf"
+>
+  <nav class="w-full md:px-24">
+    <div class="container mx-auto flex items-center justify-between text-sm sm:text-base">
+      <ul class="w-60 flex justify-around">
+        {menu.main1.map((menuElement) => <li><a href={menuElement.url}>{menuElement.name}</a></li> )}
+      </ul>
+      <a class="w-28 text-center" href="/">
+        <img src="/la-logo-green.png" alt="">
+      </a>
+      <ul class="w-60 flex justify-around">
+        {menu.main2.map((menuElement) => <li><a href={menuElement.url}>{menuElement.name}</a></li> )}
+      </ul>
+    </div>
+  </nav>
+</header>

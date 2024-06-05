@@ -1,0 +1,21 @@
+---
+interface Props {
+  text: string;
+  circleColor: string;
+}
+
+const { text = "PERSONALIZADA", circleColor="#B9B57C" } = Astro.props;
+---
+
+<svg viewBox="0 0 100 100" transform="scale(1.2)" class="w-2/3 lg:w-auto mx-auto">
+  <path
+    id="curve"
+    d="M 25,50 a 25,25 0 1,1 50,0 a 25,25 0 1,1 -50,0"
+    fill="transparent"
+    transform="rotate(-85,50,50)"
+    ></path>
+  <circle cx="50" cy="50" r="22" fill={circleColor}></circle>
+  <text text-anchor="middle" font-family="RoxboroughCF" fill="#83712A">
+    <textPath startOffset="50%" xlink:href="#curve">{text}</textPath>
+  </text>
+</svg>

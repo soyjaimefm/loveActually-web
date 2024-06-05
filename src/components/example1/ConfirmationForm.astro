@@ -1,0 +1,184 @@
+<>
+  <form class="space-y-6">
+    <div>
+      <label class="sr-only" for="name">Nombre</label>
+      <input
+        class="w-full rounded-lg border-gray-200 p-3 focus:ring-primaryGreen focus:border-primaryGreen"
+        placeholder="Nombre"
+        type="text"
+        name="Name"
+        id="name"
+      />
+    </div>
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+      <div>
+        <label class="sr-only" for="email">Email</label>
+        <input
+          class="w-full rounded-lg border-gray-200 p-3 focus:ring-primaryGreen focus:border-primaryGreen"
+          placeholder="Email"
+          type="email"
+          name="Email"
+          id="email"
+        />
+      </div>
+      <div>
+        <label class="sr-only" for="phone">Teléfono</label>
+        <input
+          class="w-full rounded-lg border-gray-200 p-3 focus:ring-primaryGreen focus:border-primaryGreen"
+          placeholder="Teléfono"
+          type="tel"
+          name="Phone"
+          id="phone"
+        />
+      </div>
+    </div>
+    <div>
+      <label class="my-2">¿Vas a necesitar un bus para llegar a la finca?</label>
+      <div class="grid grid-cols-1 gap-4 text-center sm:grid-cols-2">
+        <div>
+          <label
+            for="Option1"
+            class="block w-full cursor-pointer rounded-lg border border-gray-200 p-3 hover:border-primaryGreen has-[:checked]:border-primaryGreen has-[:checked]:bg-primaryGreen has-[:checked]:text-white"
+            tabindex="0"
+          >
+            <input
+              class="sr-only"
+              id="Option1"
+              type="radio"
+              tabindex="-1"
+              name="Transporte"
+              value="Sí"
+              required
+            />
+            <span>Sí, lo necesitaré.</span>
+          </label>
+        </div>
+
+        <!-- <div>
+          <label
+            for="Option2"
+            class="block w-full cursor-pointer rounded-lg border border-gray-200 p-3 hover:border-primaryGreen has-[:checked]:border-primaryGreen has-[:checked]:bg-primaryGreen has-[:checked]:text-white"
+            tabindex="0"
+          >
+            <input
+              class="sr-only"
+              id="Option2"
+              type="radio"
+              tabindex="-1"
+              name="Transporte"
+              value="Albacete"
+              required
+            />
+            <span>Sí, desde Albacete</span>
+          </label>
+        </div> -->
+
+        <div>
+          <label
+            for="Option3"
+            class="block w-full cursor-pointer rounded-lg border border-gray-200 p-3 hover:border-primaryGreen has-[:checked]:border-primaryGreen has-[:checked]:bg-primaryGreen has-[:checked]:text-white"
+            tabindex="0"
+          >
+            <input
+              class="sr-only"
+              id="Option3"
+              type="radio"
+              tabindex="-1"
+              name="Transporte"
+              value="No"
+              required
+            />
+            <span>No es necesario, gracias.</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <label for="alergy">¿Tienes alguna alergia o intolerancia?</label>
+      <input
+        class="w-full rounded-lg border-gray-200 p-3 focus:ring-primaryGreen focus:border-primaryGreen"
+        placeholder="alergia/intolerancia"
+        type="text"
+        name="Alergias"
+        id="alergy"
+      />
+    </div>
+
+    <div>
+      <label for="song">Dinos que canción o canciones te gustaría escuchar este día:</label>
+      <input
+        class="w-full rounded-lg border-gray-200 p-3 focus:ring-primaryGreen focus:border-primaryGreen"
+        placeholder="Artista y canción"
+        type="text"
+        name="Música"
+        id="song"
+      />
+    </div>
+
+    <div>
+      <label class="sr-only" for="message"
+        >Si tienes algo más que añadir puedes ponerlo por aquí</label
+      >
+      <textarea
+        class="w-full rounded-lg border-gray-200 p-3 focus:ring-primaryGreen focus:border-primaryGreen"
+        placeholder="Si tienes algo más que añadir puedes ponerlo por aquí..."
+        rows="4"
+        name="Mensaje"
+        id="message"></textarea>
+    </div>
+
+    <div class="mt-4">
+      <button
+        type="submit"
+        class="inline-block w-full rounded-lg bg-primaryGreen px-5 py-3 text-white sm:w-auto"
+      >
+        Enviar confirmación
+      </button>
+    </div>
+  </form>
+
+  <div id="loader"
+    class="hidden fixed top-0 left-0 w-full h-full place-items-center bg-gray-400 bg-opacity-50 border border-gray-100 rounded-lg shadow-md"
+  >
+    <div
+      class="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-e-transparent align-[-0.125em] text-surface motion-reduce:animate-[spin_1.5s_linear_infinite]"
+      role="status"
+    >
+      <span
+        class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+        >Loading...</span
+      >
+    </div>
+  </div>
+</>
+
+<script>
+  const form = document.querySelector('form');
+  const loader = document.querySelector('#loader');
+
+  form?.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    loader?.classList.add('grid');
+    loader?.classList.remove('hidden');
+
+    const formdata = new FormData(form);
+
+    fetch(
+      "https://script.google.com/macros/s/AKfycbzBXIEpQQp0u8hYxeDK9QyYzfiGU966Q5scAosJL6kIjZymxLXcFbJyMv3cuuxtokz45Q/exec",
+      { method: "POST", body: formdata },
+    )
+      .then(() => {
+        loader?.classList.remove('grid');
+        loader?.classList.add('hidden');
+        form.reset();
+        alert("Tus datos se han guardado correctamente. ¡Estamos deseando verte en este día tan especial!");
+      })
+      .catch(() => {
+        loader?.classList.remove('grid');
+        loader?.classList.add('hidden');
+        form.reset();
+        alert("Ha habido un error, espera unos minutos y vuelve a intentarlo.");
+      });
+  });
+</script>

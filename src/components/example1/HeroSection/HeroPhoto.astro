@@ -1,0 +1,21 @@
+---
+interface Props {
+  imgSrc: string;
+  dateNumber: string;
+}
+
+const { dateNumber, imgSrc } = Astro.props;
+---
+
+<div>
+  <img
+    alt=""
+    src={imgSrc}
+    class="rounded-full object-cover aspect-[9/16] opacity-75"
+  />
+  <div class="flex justify-end">
+    <span class="z-10 -mt-6 sm:-mt-12 md:-mt-14 lg:-mt-16 text-primaryGreen font-theSeasons text-5xl md:text-7xl lg:text-8xl opacity-100"
+      >{dateNumber}</span
+    >
+  </div>
+</div>

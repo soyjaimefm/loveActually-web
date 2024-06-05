@@ -1,0 +1,43 @@
+---
+import "@fontsource/belleza";
+import Header from "../components/example1/Header.astro";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <Header />
+    <slot />
+  </body>
+</html>
+<style is:inline>
+  html {
+    font-family: "Belleza", system-ui, sans-serif;
+  }
+
+  @font-face {
+    font-family: "TheSeasons";
+    src: url("/fonts/The-Seasons-Regular.ttf") format("truetype");
+    font-weight: 400;
+  }
+
+  @font-face {
+    font-family: "TheSeasons";
+    src: url("/fonts/The-Seasons-Light.ttf") format("truetype");
+    font-weight: 300;
+  }
+</style>

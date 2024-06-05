@@ -1,0 +1,97 @@
+---
+import Layout from "../../layouts/Layout1.astro";
+import HeroSection from "../../components/example1/HeroSection/HeroSection.astro";
+import SectionTitle from "../../components/example1/SectionTitle.astro";
+import Countdown from "../../components/example1/Countdown.astro";
+import ConfirmationForm from "../../components/example1/ConfirmationForm.astro";
+import Contact from "../../components/example1//Contact.astro";
+---
+
+<Layout title="Manu y Cris">
+  <main class="bg-beige text-darkGreen text-lg">
+    <HeroSection />
+    <section id="cuenta-atras" class="container mx-auto py-12 px-4">
+      <Countdown />
+    </section>
+    <!-- Sección 1 -->
+    <section id="donde-y-cuando" class="container mx-auto py-12 px-4">
+      <div class="grid grid-cols-1 items-center gap-y-6 md:grid-cols-3 md:gap-16">
+        <div class="space-y-12 col-span-2">
+          <SectionTitle>Dónde y cuándo</SectionTitle>
+          <a href="https://maps.app.goo.gl/Ss3ru119fK68RGmh7" target="_blank">
+            <div class="flex flex-col gap-6 items-center my-6 hover:scale-105 transition-transform">
+              <img class="w-36" src="example1/donde.png" alt="" />
+              <span class="text-3xl">Bodega Finca Los Aljibes</span>
+            </div>
+          </a>
+          <div class="flex flex-col gap-6 items-center my-6">
+            <img class="w-40" src="example1/cuando.png" alt="" />
+            <span class="text-3xl">19-10-2024 a las 12:00</span>
+          </div>
+          <p class="text-center">
+            Pondremos buses para que podáis desplazaros desde Hellín. También
+            podéis venir con coche propio, en la finca habrá aparcamiento
+            disponible.
+          </p>
+          <p class="text-center text-sm">
+            *Los horarios de los buses estarán disponibles más adelante
+          </p>
+        </div>
+        <div>
+          <img
+            alt="Manu y Cris en la playa"
+            src="example1/section1.jpeg"
+            class="rounded-xl object-cover aspect-[9/16]"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección 2 -->
+    <section id="alojamientos" class="bg-softGreen">
+      <div
+        class="container mx-auto py-12 px-4 grid grid-cols-1 gap-y-12 md:grid-cols-3 md:gap-16 items-center"
+      >
+        <div class="order-2 md:order-first">
+          <img
+            alt="manu y cris en la montaña"
+            src="example1/mountain.png"
+            class="rounded-xl object-cover aspect-auto"
+          />
+        </div>
+        <div class="col-span-2">
+          <SectionTitle>Alojamientos</SectionTitle>
+          <p class="mb-8 text-center">
+            Si necesitáis hacer noche en algún hotel, os
+            recomendamos este:
+          </p>
+
+          <a target="_blank" href="https://maps.app.goo.gl/6WdrisZxAJ6ECuuN8">
+            <div class="text-center hover:scale-105 transition-transform">
+              
+                <p class="text-xl">Hotel Restaurante emilio</p>
+                <p>Carretera de Jaén, nº 23, 02400-Hellín (Albacete)</p>
+                <a href="tel:967301580">
+                  <p>967 30 15 80</p>
+                </a>
+                <a href="tel:683170063">
+                  <p>683 17 00 63</p>
+                </a>
+              
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section id="confirmacion" class="container mx-auto py-12 px-4">
+      <SectionTitle>Confirmación</SectionTitle>
+      <ConfirmationForm />
+    </section>
+
+    <section id="contacto" class="bg-softGreen">
+      <div class="container mx-auto py-12 px-4">
+        <Contact />
+      </div>
+    </section>
+  </main>
+</Layout>

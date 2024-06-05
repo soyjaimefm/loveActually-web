@@ -1,0 +1,61 @@
+---
+import SectionTitle from "./SectionTitle.astro";
+---
+
+<astro-countdown>
+  <SectionTitle>Cuenta atrás</SectionTitle>
+  <p class="text-center mb-10">
+    Estamos deseando disfrutar de este día con todos vosotros
+  </p>
+  <div class="flex gap-6 sm:gap-12 justify-center font-theSeasons">
+    <div class="flex flex-col gap-2">
+      <span id="days" class="text-center text-6xl text-primaryGreen">00</span>
+      <span class="text-center">Días</span>
+    </div>
+    <div class="flex flex-col gap-2">
+      <span id="hours" class="text-center text-6xl text-primaryGreen">00</span>
+      <span class="text-center">Horas</span>
+    </div>
+    <div class="flex flex-col gap-2">
+      <span id="minutes" class="text-center text-6xl text-primaryGreen">00</span
+      >
+      <span class="text-center">Minutos</span>
+    </div>
+    <div class="flex flex-col gap-2">
+      <span id="seconds" class="text-center text-6xl text-primaryGreen">00</span
+      >
+      <span class="text-center">Segundos</span>
+    </div>
+  </div>
+</astro-countdown>
+
+<script>
+  class AstroCountdown extends HTMLElement {
+    constructor() {
+      super();
+      const wedDate = new Date("2024-10-19T12:00:00");
+      const daysElement = this.querySelector("#days");
+      const hoursElement = this.querySelector("#hours");
+      const minutesElement = this.querySelector("#minutes");
+      const secondsElement = this.querySelector("#seconds");
+
+      setInterval(() => {
+        let timeNow = new Date();
+        let t = (wedDate.getTime() - timeNow.getTime()) / 1000;
+        let seconds = Math.floor(t % 60);
+        let minutes = Math.floor(t / 60) % 60;
+        let hours = Math.floor(t / (60 * 60)) % 24;
+        let days = Math.floor(t / (60 * 60 * 24));
+
+        if (daysElement != null && hoursElement != null && minutesElement != null && secondsElement != null) {
+          daysElement.innerHTML = days.toString();
+          hoursElement.innerHTML = hours.toString();
+          minutesElement.innerHTML = minutes.toString();
+          secondsElement.innerHTML = seconds.toString(); 
+        }
+      }, 1000);
+    }
+  }
+
+  customElements.define('astro-countdown', AstroCountdown);
+</script>

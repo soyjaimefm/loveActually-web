@@ -1,0 +1,16 @@
+---
+import HeroPhoto from "./HeroPhoto.astro"
+---
+
+<section class="bg-softGreen">
+    <div class="container mx-auto py-12 px-4  grid grid-cols-3 gap-8 lg:grid-cols-4 lg:gap-20">
+        <div class="content-center col-span-3 lg:col-span-1">
+            <h2 class="text-primaryGreen font-light text-4xl font-theSeasons lg:text-6xl lg:max-w-3">
+                NUESTRO GRAN DÍA
+            </h2>
+        </div>
+        <HeroPhoto dateNumber="19" imgSrc="example1/1.jpeg" />
+        <HeroPhoto dateNumber="10" imgSrc="example1/2.jpeg" />
+        <HeroPhoto dateNumber="24" imgSrc="example1/3.jpeg" />
+    </div>
+</section>

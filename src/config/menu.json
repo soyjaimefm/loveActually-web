@@ -1,0 +1,37 @@
+{
+  "main1": [
+    {
+      "name": "HOME",
+      "url": "/"
+    },
+    {
+      "name": "SERVICIOS",
+      "url": "/servicios"
+    }
+  ],
+  "main2": [
+    {
+      "name": "ABOUT",
+      "url": "/about"
+    },
+    {
+      "name": "Q&A",
+      "url": "/questions-answers"
+    }
+
+  ],
+  "footer": [
+    {
+      "name": "CONTACTO",
+      "url": "/contacto"
+    },
+    {
+      "name": "TESTIMONIOS",
+      "url": "/testimonios"
+    },
+    {
+      "name": "DUDAS FRECUENTES",
+      "url": "/dudas-frecuentes"
+    }
+  ]
+}
