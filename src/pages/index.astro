@@ -73,12 +73,12 @@ import text from "../config/text";
       >
         <div class="col-span-2 p-12">
           <h2
-            class="text-laOrange text-2xl md:text-4xl leading-normal tracking-widest text-center font-alNevrada"
+            class="text-laOrange text-2xl md:text-4xl leading-normal tracking-widest text-center font-alNevrada mb-4"
           >
             {text.section2.title}
           </h2>
           <p class="text-center">
-            {text.section2.text}
+            <Fragment set:html={text.section2.text} />
           </p>
         </div>
         <div>
