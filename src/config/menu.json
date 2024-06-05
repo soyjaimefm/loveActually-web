@@ -12,11 +12,11 @@
   "main2": [
     {
       "name": "ABOUT",
-      "url": "/about"
+      "url": "/sobre-nosotros"
     },
     {
       "name": "Q&A",
-      "url": "/questions-answers"
+      "url": "/preguntas-frecuentes"
     }
 
   ],
@@ -31,7 +31,7 @@
     },
     {
       "name": "DUDAS FRECUENTES",
-      "url": "/dudas-frecuentes"
+      "url": "/preguntas-frecuentes"
     }
   ]
 }
