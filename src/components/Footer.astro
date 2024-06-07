@@ -1,5 +1,7 @@
 ---
 import menu from '../config/menu.json';
+import Instagram from './logos/Instagram.astro';
+import Tiktok from './logos/Tiktok.astro';
 ---
 
 <!-- <footer
@@ -12,10 +14,22 @@ import menu from '../config/menu.json';
     <div class="mx-auto w-24 sm:w-32 md:w-48 grid place-items-center justify-center aspect-square bg-center bg-contain bg-no-repeat bg-[url('/footer-shape.svg')]">
       <div class="-rotate-[30deg] w-fit text-center text-xs md:text-base text-laRed">¡QUEREMOS<br>NUESTRA WEB!</div>
     </div>
-    <div class="col-span-2 md:col-span-1">
+    <div class="col-span-2 md:col-span-1 flex flex-col gap-2 md:gap-4">
       <ul class="text-center text-sm sm:text-base md:text-lg">
         {menu.footer.map((menuElement) => <li><a href={menuElement.url}>{menuElement.name}</a></li>)}
       </ul>
+      <div class="flex justify-center gap-6">
+        <div class="w-6">
+          <a href="https://www.instagram.com/loveactually.bodas/?hl=es" target="_blank">
+            <Instagram/>
+          </a>
+        </div>
+        <div class="w-6">
+          <a href="https://www.tiktok.com/@loveactually.bodas" target="_blank">
+            <Tiktok />
+          </a>
+        </div>
+      </div>
     </div>
     <div class="flex justify-center">
       <img class="w-32" src="/la-seal-softgreen.png" alt="">
