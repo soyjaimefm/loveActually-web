@@ -28,4 +28,31 @@ const text = {
   }
 }
 
-export default text;
+const qaText = [
+  {
+    question: `¿CÓMO TRABAJAMOS?`,
+    answer: `En primer lugar, nos encanta conoceros. Ya sea a través de un cuestionario o reuniéndonos por videollamada, nos contáis cómo os gustaría que fuera vuestra web y cómo sois vosotros. Este paso es muy importante para que todo vaya acorde a vuestra forma de ser como pareja. Después, os decimos el presupuesto y si os parece bien nos ponemos manos a la obra.`
+  },
+  {
+    question: `¿CUÁNTO TIEMPO TARDAMOS EN CREAR LA WEB DE VUESTRA BODA?`,
+    answer: `No solemos tardar más de un mes en tenerla lista, aunque los plazos dependen de cada trabajo en concreto. Si queréis algo muy especial, puede que tardemos un poco más, y si se trata de una web sencilla podemos tenerla acabada en dos semanas.`
+  },
+  {
+    question: `¿LA WEB TENDRÁ UN DOMINIO CON NUESTRO NOMBRE?`,
+    answer: `Por supuesto, podemos personalizar el dominio, por ejemplo: www.davidyjulia.es`
+  },
+  {
+    question: `¿SE PUEDEN HACER MODIFICACIONES UNA VEZ ESTÉ TERMINADA LA WEB?`,
+    answer: `¡Claro que sí! Lo importante es que quedéis felices con el resultado. Tenéis de plazo un mes para pedirnos todas las modificaciones que queráis. Después podemos hacerlas, pero supondrá un coste extra.`
+  },
+  {
+    question: `¿CUÁLES SON VUESTRAS TARIFAS?`,
+    answer: `Al igual que cada web y proyecto es personalizada para cada pareja, el precio también debe serlo. Podemos hacer webs a partir de 200 euros, ¡preguntadnos sin ningún compromiso!`
+  },
+  {
+    question: `¿LA WEB SEGUIRÁ ACTIVA DESPUÉS DE LA BODA?`,
+    answer: `Esta será una de las preguntas que os haremos cuando hablemos, es a vuestra elección.`
+  }
+]
+
+export {text, qaText};

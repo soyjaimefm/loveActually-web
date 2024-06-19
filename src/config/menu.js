@@ -1,4 +1,4 @@
-{
+const menu = {
   "main1": [
     {
       "name": "HOME",
@@ -18,7 +18,6 @@
       "name": "Q&A",
       "url": "/preguntas-frecuentes"
     }
-
   ],
   "footer": [
     {
@@ -35,3 +34,5 @@
     }
   ]
 }
+
+export default menu;
