@@ -31,7 +31,7 @@ const text = {
 const qaText = [
   {
     question: `¿CÓMO TRABAJAMOS?`,
-    answer: `En primer lugar, nos encanta conoceros. Ya sea a través de un cuestionario o reuniéndonos por videollamada, nos contáis cómo os gustaría que fuera vuestra web y cómo sois vosotros. Este paso es muy importante para que todo vaya acorde a vuestra forma de ser como pareja. Después, os decimos el presupuesto y si os parece bien nos ponemos manos a la obra.`
+    answer: `En primer lugar, nos encanta conoceros. Ya sea a través de un cuestionario o reuniéndonos por videollamada, nos contáis cómo os gustaría que fuera vuestra web y cómo sois vosotros. Este paso es muy importante para que todo vaya acorde a vuestros gustos como pareja. Después, os decimos el presupuesto y si os parece bien nos ponemos manos a la obra.`
   },
   {
     question: `¿CUÁNTO TIEMPO TARDAMOS EN CREAR LA WEB DE VUESTRA BODA?`,

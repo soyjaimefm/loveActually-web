@@ -14,9 +14,9 @@ import { qaText } from "../config/text";
       <div class="max-w-2xl mx-auto">
         {
           qaText.map((qa) => (
-            <details class="p-4 mt-2 bg-laBeige open:bg-gray-50">
-              <summary class="cursor-pointer">{qa.question}</summary>
-              <p class="mt-4">{qa.answer}</p>
+            <details class="mt-2">
+              <summary class="cursor-pointer bg-laBeige p-4">{qa.question}</summary>
+              <p class="p-4">{qa.answer}</p>
             </details>
           ))
         }
