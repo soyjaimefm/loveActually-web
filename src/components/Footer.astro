@@ -19,16 +19,12 @@ import TiktokLogo from './logos/TiktokLogo.astro';
         {menu.footer.map((menuElement) => <li><a href={menuElement.url}>{menuElement.name}</a></li>)}
       </ul>
       <div class="flex justify-center gap-6">
-        <div class="w-6">
-          <a href="https://www.instagram.com/loveactually.bodas/?hl=es" target="_blank">
-            <InstagramLogo />
-          </a>
-        </div>
-        <div class="w-6">
-          <a href="https://www.tiktok.com/@loveactually.bodas" target="_blank">
-            <TiktokLogo />
-          </a>
-        </div>
+        <a href="https://www.instagram.com/loveactually.bodas/?hl=es" target="_blank">
+          <InstagramLogo class="w-6" />
+        </a>
+        <a href="https://www.tiktok.com/@loveactually.bodas" target="_blank">
+          <TiktokLogo class="w-6" />
+        </a>
       </div>
     </div>
     <div class="flex justify-center">
