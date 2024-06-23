@@ -1,13 +1,14 @@
 ---
-import Layout from "../../layouts/Layout1.astro";
-import HeroSection from "../../components/example1/HeroSection/HeroSection.astro";
-import SectionTitle from "../../components/example1/SectionTitle.astro";
-import Countdown from "../../components/example1/Countdown.astro";
-import ConfirmationForm from "../../components/example1/ConfirmationForm.astro";
-import Contact from "../../components/example1/Contact.astro";
+import Layout1 from "../../../layouts/Layout1.astro";
+import HeroSection from "../../../components/example1/HeroSection/HeroSection.astro";
+import SectionTitle from "../../../components/example1/SectionTitle.astro";
+import Countdown from "../../../components/example1/Countdown.astro";
+import ConfirmationForm from "../../../components/example1/ConfirmationForm.astro";
+import Contact from "../../../components/example1/Contact.astro";
+import weddingData from '../../../config/weddingData/weddingData';
 ---
 
-<Layout title="Manu y Cris">
+<Layout1 title={weddingData.boy + ' y ' + weddingData.girl}>
   <main class="bg-beige text-darkGreen text-lg">
     <HeroSection />
     <section id="cuenta-atras" class="container mx-auto py-12 px-4">
@@ -39,7 +40,7 @@ import Contact from "../../components/example1/Contact.astro";
         </div>
         <div>
           <img
-            alt="Manu y Cris en la playa"
+            alt=""
             src="example1/section1.jpeg"
             class="rounded-xl object-cover aspect-[9/16]"
           />
@@ -54,7 +55,7 @@ import Contact from "../../components/example1/Contact.astro";
       >
         <div class="order-2 md:order-first">
           <img
-            alt="manu y cris en la montaña"
+            alt=""
             src="example1/mountain.png"
             class="rounded-xl object-cover aspect-auto"
           />
@@ -94,4 +95,4 @@ import Contact from "../../components/example1/Contact.astro";
       </div>
     </section>
   </main>
-</Layout>
+</Layout1>
