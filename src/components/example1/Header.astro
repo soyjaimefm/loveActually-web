@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import menu from "../../config/weddingData/menu";
 ---
 
 <header
@@ -8,24 +9,31 @@ import { Image } from "astro:assets";
   <nav class="w-full">
     <div class="container mx-auto flex items-center justify-center sm:gap-40">
       <ul class="w-32 flex flex-col items-start">
-        <li>
-          <a href="#cuenta-atras"> Cuenta atrás </a>
-        </li>
-        <li>
-          <a href="#donde-y-cuando"> Dónde y cuándo </a>
-        </li>
+        {
+          menu.main1.map((menuItem) => (
+            <li>
+              <a href={menuItem.url}>{menuItem.name}</a>
+            </li>
+          ))
+        }
       </ul>
       <a class="w-28" href="/">
-        <Image src="/example1/logo-myc.png" alt="logo-home" width={110} height={110} />
+        <Image
+          src="/example1/logo-myc.png"
+          alt="logo-home"
+          width={110}
+          height={110}
+        />
       </a>
 
       <ul class="w-32 flex flex-col items-end">
-        <li>
-          <a href="#alojamientos"> Alojamientos </a>
-        </li>
-        <li>
-          <a href="#confirmacion"> Confirmación </a>
-        </li>
+        {
+          menu.main2.map((menuItem) => (
+            <li>
+              <a href={menuItem.url}>{menuItem.name}</a>
+            </li>
+          ))
+        }
       </ul>
     </div>
   </nav>
