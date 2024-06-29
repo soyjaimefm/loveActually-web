@@ -11,23 +11,24 @@ if (Astro.request.method === "POST") {
     const email = data.get("email");
     const message = data.get("message");
     console.log(name, email, message);
+    console.log('SEND EMAIL');
 
-    await resend.emails.send({
-      from: "Acme <onboarding@resend.dev>",
-      to: ["jaimefrm93@gmail.com"],
-      subject: "hello world",
-      text: "it works!",
+    // await resend.emails.send({
+    //   from: "Acme <onboarding@resend.dev>",
+    //   to: ["jaimefrm93@gmail.com"],
+    //   subject: "hello world",
+    //   text: "it works!",
 
-      headers: {
-        "X-Entity-Ref-ID": "123456789",
-      },
-      tags: [
-        {
-          name: "category",
-          value: "confirm_email",
-        },
-      ],
-    });
+    //   headers: {
+    //     "X-Entity-Ref-ID": "123456789",
+    //   },
+    //   tags: [
+    //     {
+    //       name: "category",
+    //       value: "confirm_email",
+    //     },
+    //   ],
+    // });
   } catch (error) {
     console.log(error);
   }
