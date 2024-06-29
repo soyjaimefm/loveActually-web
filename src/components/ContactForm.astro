@@ -1,8 +1,24 @@
 ---
 
+
+
+if (Astro.request.method === 'POST') {
+  try{
+    // Getting posted data from our contact form
+    const data = await Astro.request.formData();
+    const name = data.get('name');
+    const email = data.get('email');
+    const message = data.get('message');
+    console.log(name,email,message);
+  } catch (error) {
+    console.log(error);
+
+  }
+}
+
 ---
 <div class="bg-white p-8 shadow-md lg:col-span-3 lg:p-10">
-  <form action="#" class="space-y-4">
+  <form method="POST" class="space-y-4">
     <div>
       <label class="sr-only" for="name">Nombre</label>
       <input
