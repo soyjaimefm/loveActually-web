@@ -1,22 +1,39 @@
 ---
+import { Resend } from "resend";
 
+const resend = new Resend(import.meta.env.RESEND_API_KEY);
 
-
-if (Astro.request.method === 'POST') {
-  try{
+if (Astro.request.method === "POST") {
+  try {
     // Getting posted data from our contact form
     const data = await Astro.request.formData();
-    const name = data.get('name');
-    const email = data.get('email');
-    const message = data.get('message');
-    console.log(name,email,message);
+    const name = data.get("name");
+    const email = data.get("email");
+    const message = data.get("message");
+    console.log(name, email, message);
+
+    await resend.emails.send({
+      from: "Acme <onboarding@resend.dev>",
+      to: ["jaimefrm93@gmail.com"],
+      subject: "hello world",
+      text: "it works!",
+
+      headers: {
+        "X-Entity-Ref-ID": "123456789",
+      },
+      tags: [
+        {
+          name: "category",
+          value: "confirm_email",
+        },
+      ],
+    });
   } catch (error) {
     console.log(error);
-
   }
 }
-
 ---
+
 <div class="bg-white p-8 shadow-md lg:col-span-3 lg:p-10">
   <form method="POST" class="space-y-4">
     <div>
@@ -25,6 +42,7 @@ if (Astro.request.method === 'POST') {
         class="w-full border-gray-200 p-3 focus:ring-laGreen focus:border-laGreen"
         placeholder="Nombre"
         type="text"
+        name="name"
         id="name"
       />
     </div>
@@ -36,6 +54,7 @@ if (Astro.request.method === 'POST') {
           class="w-full border-gray-200 p-3 focus:ring-laGreen focus:border-laGreen"
           placeholder="Email"
           type="email"
+          name="email"
           id="email"
         />
       </div>
@@ -46,6 +65,7 @@ if (Astro.request.method === 'POST') {
           class="w-full border-gray-200 p-3 focus:ring-laGreen focus:border-laGreen"
           placeholder="Teléfono"
           type="tel"
+          name="phone"
           id="phone"
         />
       </div>
@@ -108,7 +128,9 @@ if (Astro.request.method === 'POST') {
     </div> -->
 
     <div>
-      <label class="sr-only" for="message">Puedes dejarnos un mensaje aquí</label>
+      <label class="sr-only" for="message"
+        >Puedes dejarnos un mensaje aquí</label
+      >
 
       <textarea
         class="w-full border-gray-200 p-3 focus:ring-laGreen focus:border-laGreen"
