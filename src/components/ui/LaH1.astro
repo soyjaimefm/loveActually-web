@@ -1,0 +1,7 @@
+---
+interface Props {
+  class?: string;
+}
+---
+
+<h1 class={`text-3xl ${Astro.props.class}`}><slot/></h1>

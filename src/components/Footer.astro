@@ -1,38 +1,52 @@
 ---
-import menu from '../config/menu';
-import InstagramLogo from './logos/InstagramLogo.astro';
-import TiktokLogo from './logos/TiktokLogo.astro';
+import menu from "../config/menu";
+import InstagramLogo from "./logos/InstagramLogo.astro";
+import TiktokLogo from "./logos/TiktokLogo.astro";
 ---
 
-<!-- <footer
-  class="max-w-6xl p-2 flex justify-center items-center container mx-auto bg-laSoftGreen text-laBeige font-roxboroughCf"   -rotate-[30deg] 
+<footer
+  class="bg-laSoftGreen text-laBeige font-roxboroughCf container mx-auto max-w-6xl py-6 px-4 md:px-8"
 >
-  
-</footer> -->
-<footer class="bg-laSoftGreen text-laBeige font-roxboroughCf container mx-auto max-w-6xl py-6 px-4 md:px-8">
-  <div class="grid items-center justify-center grid-cols-4 md:grid-cols-3 gap-y-6 md:gap-16">
-    <div class="mx-auto w-24 sm:w-32 md:w-48 grid place-items-center justify-center aspect-square bg-center bg-contain bg-no-repeat bg-[url('/footer-shape.svg')]">
-      <div class="-rotate-[30deg] w-fit text-center text-xs md:text-base text-laRed">¡QUEREMOS<br>NUESTRA WEB!</div>
-    </div>
-    <div class="col-span-2 md:col-span-1 flex flex-col gap-2 md:gap-4">
-      <ul class="text-center text-sm sm:text-base md:text-lg">
-        {menu.footer.map((menuElement) => <li><a href={menuElement.url}>{menuElement.name}</a></li>)}
-      </ul>
-      <div class="flex justify-center gap-6">
-        <div class="w-6">
-          <a href="https://www.instagram.com/loveactually.bodas/?hl=es" target="_blank">
-            <InstagramLogo />
-          </a>
-        </div>
-        <div class="w-6">
-          <a href="https://www.tiktok.com/@loveactually.bodas" target="_blank">
-            <TiktokLogo />
-          </a>
+  <div
+    class="grid items-center justify-center grid-cols-4 md:grid-cols-3 gap-y-6 md:gap-16"
+  >
+    <a href="/contacto">
+      <div
+        class="mx-auto w-24 sm:w-32 md:w-48 grid place-items-center justify-center aspect-square bg-center bg-contain bg-no-repeat bg-[url('/footer-shape.svg')]"
+      >
+        <div
+          class="-rotate-[30deg] w-fit text-center text-xs md:text-base text-laRed"
+        >
+          ¡QUEREMOS<br />NUESTRA WEB!
         </div>
       </div>
+    </a>
+    <div class="col-span-2 md:col-span-1 flex flex-col gap-2 md:gap-4">
+      <ul class="text-center text-sm sm:text-base md:text-lg">
+        {
+          menu.footer.map((menuElement) => (
+            <li>
+              <a href={menuElement.url}>{menuElement.name}</a>
+            </li>
+          ))
+        }
+      </ul>
+      <div class="flex justify-center gap-6">
+        <a
+          href="https://www.instagram.com/loveactually.bodas/?hl=es"
+          target="_blank"
+        >
+          <InstagramLogo class="w-6" />
+        </a>
+        <a href="https://www.tiktok.com/@loveactually.bodas" target="_blank">
+          <TiktokLogo class="w-6" />
+        </a>
+      </div>
     </div>
-    <div class="flex justify-center">
-      <img class="w-32" src="/la-seal-softgreen.png" alt="">
-    </div>
+    <a href="/">
+      <div class="flex justify-center">
+        <img class="w-32" src="/la-seal-softgreen.png" alt="" />
+      </div>
+    </a>
   </div>
 </footer>

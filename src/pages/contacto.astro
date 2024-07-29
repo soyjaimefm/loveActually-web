@@ -1,12 +1,41 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Building from '../components/Building.astro';
+import Layout from "../layouts/Layout.astro";
+import Building from "../components/Building.astro";
+import EmailLogo from "../components/logos/EmailLogo.astro";
+import PhoneLogo from "../components/logos/PhoneLogo.astro";
+import ContactForm from "../components/ContactForm.astro";
 ---
 
-<Layout title="Love Actually">
+<Layout title="Contacto | Love Actually | Webs de bodas" description="Love Actually Webs de boda. Contacta con nosotros">
   <main class="bg-laBackground">
-    <section id="Hero section" class="max-w-6xl bg-laBeige container mx-auto py-12 px-8">
-      <Building />
+    <section class="bg-laBeige max-w-6xl mx-auto container py-12 px-8">
+      <div class="mx-auto max-w-screen-xl sm:px-6">
+        <div class="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5">
+          <div class="lg:col-span-2 lg:py-12">
+            <h1
+              class="mb-6 text-4xl leading-normal tracking-widest text-center text-laOrange md:text-4xl lg:text-4xl font-alNevrada"
+            >
+              Contacta con nosotros
+            </h1>
+            <p class="max-w-xl">
+              Podéis contactar con nosotros por cualquiera de estos medios.
+              Estaremos encantados de atender vuestras dudas y ayudaros con la
+              web de vuestra boda.
+            </p>
+            <div class="mt-8 flex flex-col">
+              <a href="#" class="text-lg md:text-xl text-laGreen flex items-center gap-2">
+                <PhoneLogo class="w-6" />
+                +34 687 72 24 98
+              </a>
+              <a href="#" class="text-lg md:text-xl text-laGreen flex items-center gap-2">
+                <EmailLogo class="w-6" />
+                loveactually@gmail.com
+              </a>
+            </div>
+          </div>
+          <ContactForm />
+        </div>
+      </div>
     </section>
   </main>
 </Layout>
