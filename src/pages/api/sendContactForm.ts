@@ -28,7 +28,7 @@ export const POST: APIRoute = async ({ request }) => {
 
   // Sending information to Resend
   const sendResendToAdmin = await resend.emails.send({
-    from: 'support@resend.dev',
+    from: 'info@loveactually.es',
     to: 'loveactually.bodas@gmail.com',
     subject: `Sumbission from ${name}`,
     html: `${name} se ha puesto en contacto con Love Actually a través del formulario de contacto. Sus datos son los siguientes:<br>
@@ -41,12 +41,12 @@ export const POST: APIRoute = async ({ request }) => {
   });
 
   const sendResendToCustomer = await resend.emails.send({
-    from: 'support@resend.dev',
+    from: 'info@loveactually.es',
     to: `${email}`,
     subject: `Gracias por ponerte en contacto con Love Actually`,
-    html: `Gracias por contactar con Love Actually.
-    Atenderemos tu solicitud lo antes posible.
-    Un saludo`,
+    html: `Gracias por contactar con Love Actually.<br>
+    Atenderemos tu solicitud lo antes posible.<br>
+    Un saludo<br>`,
   });
 
   // If the message was sent successfully, return a 200 response
