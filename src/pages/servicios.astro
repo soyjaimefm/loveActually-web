@@ -1,17 +1,35 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Building from '../components/Building.astro';
+import Layout from "../layouts/Layout.astro";
+import LaH2 from "../components/ui/LaH2.astro"
+import LaH3 from "../components/ui/LaH3.astro";
 ---
 
-<Layout title="Servicios | Love Actually | Webs de bodas" description="Servicios: 💍 Webs de boda a medida y personalizadas 🌷 Invitaciones digitales">
+<Layout
+  title="Servicios | Love Actually | Webs de bodas"
+  description="Servicios: 💍 Webs de boda a medida y personalizadas 🌷 Invitaciones digitales"
+>
   <main class="bg-laBackground">
     <section class="max-w-6xl bg-laRed container mx-auto py-12 px-8">
-     
-        <h1
-          class="mb-6 text-3xl leading-normal tracking-widest text-center text-laBeige md:text-4xl lg:text-5xl font-alNevrada"
-        >
-          Servicios
-        </h1>
+      <h1
+        class="mb-6 text-3xl leading-normal tracking-widest text-center text-laBeige md:text-4xl lg:text-5xl font-alNevrada"
+      >
+        Servicios
+      </h1>
+    </section>
+    <section class="max-w-6xl bg-laSoftBlue container mx-auto py-12 px-8">
+      <LaH2>Webs de bodas personalizadas</LaH2>
+      <p></p>
+      <LaH3>¿Por qué es importante tener una web de vuestra boda?</LaH3>
+      <p>Nos gusta poner las cosas fáciles y solo se nos ocurre una manera de organizar a todos vuestros seres queridos de forma sencilla y ordenada</p>
+
+
+
+      <LaH2 class="text-laRed">Invitaciones digitales</LaH2>
+
+      <LaH2>Papelería y diseño de seating plan</LaH2>
+
+      <LaH2>¿Teneis alguna idea?</LaH2>
+      <p>Si vuestra imaginación va más allá de los servicios que os proponemos sentios libres de contarnos vuestras ideas y nosotros estaremos encantados de adaptarnos a vosotros en todo lo que podamos.</p>
     </section>
   </main>
 </Layout>

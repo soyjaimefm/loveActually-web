@@ -6,10 +6,7 @@ import { Resend } from 'resend';
 const resend = new Resend(import.meta.env.RESEND_API_KEY);
 
 export const POST: APIRoute = async ({ request }) => {
-  console.log(request);
-
   const data = await request.formData();
-  console.log(data);
   const name = data.get("name");
   const email = data.get("email");
   const phone = data.get("phone");
@@ -30,9 +27,9 @@ export const POST: APIRoute = async ({ request }) => {
   // }
 
   // Sending information to Resend
-  const sendResend = await resend.emails.send({
+  const sendResendToAdmin = await resend.emails.send({
     from: 'support@resend.dev',
-    to: 'jaimefrm93@gmail.com',
+    to: 'loveactually.bodas@gmail.com',
     subject: `Sumbission from ${name}`,
     html: `${name} se ha puesto en contacto con Love Actually a través del formulario de contacto. Sus datos son los siguientes:<br>
     Nombre: ${name}<br>
@@ -43,8 +40,17 @@ export const POST: APIRoute = async ({ request }) => {
     `,
   });
 
+  const sendResendToCustomer = await resend.emails.send({
+    from: 'support@resend.dev',
+    to: `${email}`,
+    subject: `Gracias por ponerte en contacto con Love Actually`,
+    html: `Gracias por contactar con Love Actually.
+    Atenderemos tu solicitud lo antes posible.
+    Un saludo`,
+  });
+
   // If the message was sent successfully, return a 200 response
-  if (sendResend.data) {
+  if (sendResendToAdmin.data && sendResendToCustomer.data) {
     return new Response(
       JSON.stringify({
         message: `Message successfully sent!`,
