@@ -1,7 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import LaH2 from "../components/ui/LaH2.astro"
+import LaH2 from "../components/ui/LaH2.astro";
 import LaH3 from "../components/ui/LaH3.astro";
+import LaH1 from "../components/ui/LaH1.astro";
 ---
 
 <Layout
@@ -10,26 +11,87 @@ import LaH3 from "../components/ui/LaH3.astro";
 >
   <main class="bg-laBackground">
     <section class="max-w-6xl bg-laRed container mx-auto py-12 px-8">
-      <h1
-        class="mb-6 text-3xl leading-normal tracking-widest text-center text-laBeige md:text-4xl lg:text-5xl font-alNevrada"
+      <LaH1 class="text-center text-laBeige font-alNevrada">Servicios</LaH1>
+    </section>
+
+    <section class="max-w-6xl bg-laBeige container mx-auto py-12 px-8">
+      <div
+        class="grid grid-cols-1 items-center gap-y-6 md:grid-cols-2 md:gap-16"
       >
-        Servicios
-      </h1>
+        <div>
+          <LaH2>Webs de bodas personalizadas</LaH2>
+          <p>
+            Nos gusta poner las cosas fáciles y solo se nos ocurre una manera de
+            organizar a todos vuestros seres queridos de forma sencilla y
+            ordenada
+          </p>
+          <div class="mt-6 flex justify-center">
+            <a
+              class="inline-block w-full bg-laSoftGreen px-5 py-3 font-medium text-white sm:w-auto"
+              href="/contacto"
+            >
+              ¿Quieres saber más?
+            </a>
+          </div>
+        </div>
+        <div>
+          <img
+            src="/web-boda-personalizada.jpeg"
+            alt=""
+            class="object-cover aspect-[4/3]"
+          />
+        </div>
+      </div>
     </section>
     <section class="max-w-6xl bg-laSoftBlue container mx-auto py-12 px-8">
-      <LaH2>Webs de bodas personalizadas</LaH2>
-      <p></p>
-      <LaH3>¿Por qué es importante tener una web de vuestra boda?</LaH3>
-      <p>Nos gusta poner las cosas fáciles y solo se nos ocurre una manera de organizar a todos vuestros seres queridos de forma sencilla y ordenada</p>
+      <div
+        class="grid grid-cols-1 items-center gap-y-6 md:grid-cols-2 md:gap-16"
+      >
+        <div>
+          <img
+            src="/invitaciones-digitales.jpeg"
+            alt=""
+            class="object-cover aspect-[4/3]"
+          />
+        </div>
+        <div>
+          <LaH2 class="text-laRed">Invitaciones digitales</LaH2>
+        </div>
+      </div>
+    </section>
 
+    <section class="max-w-6xl bg-laBeige container mx-auto py-12 px-8">
+      <div
+        class="grid grid-cols-1 items-center gap-y-6 md:grid-cols-2 md:gap-16"
+      >
+        <div>
+          <LaH2>Papelería y diseño de seating plan</LaH2>
+        </div>
+        <div>
+          <img
+            src="/papeleria-seating-plan.jpeg"
+            alt=""
+            class="object-cover aspect-[4/3]"
+          />
+        </div>
+      </div>
+    </section>
 
-
-      <LaH2 class="text-laRed">Invitaciones digitales</LaH2>
-
-      <LaH2>Papelería y diseño de seating plan</LaH2>
-
-      <LaH2>¿Teneis alguna idea?</LaH2>
-      <p>Si vuestra imaginación va más allá de los servicios que os proponemos sentios libres de contarnos vuestras ideas y nosotros estaremos encantados de adaptarnos a vosotros en todo lo que podamos.</p>
+    <section class="max-w-6xl bg-laOrange container mx-auto py-12 px-8">
+      <LaH2 class="text-laBeige">¿Teneis alguna idea?</LaH2>
+      <p class="text-laBeige">
+        Si vuestra imaginación va más allá de los servicios que os proponemos
+        sentios libres de contarnos vuestras ideas y nosotros estaremos
+        encantados de adaptarnos a vosotros en todo lo que podamos.
+      </p>
+      <div class="mt-6 flex justify-center">
+        <a
+          class="inline-block w-full bg-laBeige px-5 py-3 font-medium text-laGreen sm:w-auto"
+          href="/contacto"
+        >
+          ¡Cuéntanos! Estamos deseando conocer tus ideas
+        </a>
+      </div>
     </section>
   </main>
 </Layout>
