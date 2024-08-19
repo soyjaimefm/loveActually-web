@@ -2,6 +2,8 @@
 import Layout from "../layouts/Layout.astro";
 import CircleText from "../components/CircleText.astro";
 import { text } from "../config/text";
+import LaH1 from "../components/ui/LaH1.astro";
+import LaH2 from "../components/ui/LaH2.astro";
 ---
 
 <Layout title="Love Actually | Webs de bodas" description="💍 Diseñamos vuestra web de boda a medida 🌷 También hacemos invitaciones digitales">
@@ -23,11 +25,7 @@ import { text } from "../config/text";
           />
         </div>
         <div>
-          <h1
-            class="text-laRed text-3xl md:text-4xl lg:text-5xl leading-normal tracking-widest text-center font-alNevrada"
-          >
-            {text.heroSection.title}
-          </h1>
+          <LaH1 class="text-laRed text-center">{text.heroSection.title}</LaH1>
         </div>
       </div>
     </section>
@@ -72,11 +70,7 @@ import { text } from "../config/text";
         class="grid grid-cols-1 items-center gap-y-6 md:grid-cols-3 md:gap-16"
       >
         <div class="col-span-2 p-12">
-          <h2
-            class="text-laOrange text-2xl md:text-4xl leading-normal tracking-widest text-center font-alNevrada mb-4"
-          >
-            {text.section2.title}
-          </h2>
+          <LaH2 class="text-laOrange mb-4">{text.section2.title}</LaH2>
           <p class="text-center">
             <Fragment set:html={text.section2.text} />
           </p>

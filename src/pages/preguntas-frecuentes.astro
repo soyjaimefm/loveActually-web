@@ -1,16 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { qaText } from "../config/text";
+import LaH1 from "../components/ui/LaH1.astro";
 ---
 
 <Layout title="Q&A | Love Actually | Webs de bodas" description="Preguntas frecuentes sobre nuestras webs de bodas e invitaciones digitales">
   <main class="bg-laBackground">
     <section class="container max-w-6xl px-8 py-12 mx-auto bg-gray-50">
-      <h1
-        class="mb-6 text-3xl leading-normal tracking-widest text-center text-laOrange md:text-4xl lg:text-5xl font-alNevrada"
-      >
-        Preguntas frecuentes
-      </h1>
+      <LaH1 class="text-center text-laOrange mb-6">Preguntas frecuentes</LaH1>
       <div class="max-w-2xl mx-auto">
         {
           qaText.map((qa) => (

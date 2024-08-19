@@ -1,12 +1,50 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Building from '../components/Building.astro';
+import Layout from "../layouts/Layout.astro";
+import Building from "../components/Building.astro";
+import LaH1 from "../components/ui/LaH1.astro";
+import LaH2 from "../components/ui/LaH2.astro";
 ---
 
-<Layout title="Sobre nosotros | Love Actually | Webs de bodas" description="Sobre nosotros: 💍 Webs de boda a medida y personalizadas 🌷 Invitaciones digitales">
+<Layout
+  title="Sobre nosotros | Love Actually | Webs de bodas"
+  description="Sobre nosotros: 💍 Webs de boda a medida y personalizadas 🌷 Invitaciones digitales"
+>
   <main class="bg-laBackground">
-    <section id="Hero section" class="max-w-6xl bg-laBeige container mx-auto py-12 px-8">
-      <Building />
+    <section class="container max-w-6xl px-8 py-12 mx-auto bg-laSoftGreen">
+      <LaH1 class="text-center text-laRed">Sobre nosotros</LaH1>
+      <p class="text-laBeige text-center">
+        Somos unos locos de las bodas y la programación (cada uno, lo suyo) que
+        han unido dos de sus pasiones para crear este proyecto.
+      </p>
+    </section>
+    <section class="container max-w-6xl px-8 py-12 mx-auto bg-gray-50">
+      <div
+        class="grid grid-cols-1 items-center gap-y-6 md:grid-cols-3 md:gap-16"
+      >
+        <div class="col-span-2">
+          <LaH2>Conócenos un poquito más</LaH2>
+          <p class="text-laGreen text-center">
+            Algunas de las cosas que más nos gustan son viajar, disfrutar con
+            los que más queremos, las sobremesas eternas, un buen concierto...
+          </p>
+          <p class="text-laGreen text-center">
+            Después de hacer algunas webs de bodas a amigos, pensamos en lo
+            divertido que sería poder conocer a otras parejas y ayudarles a
+            organizar su boda con una web que refleje su personalidad y que
+            invite a empezar a disfrutar: porque una boda se celebra desde la
+            invitación, ¿no?
+          </p>
+          <div class="mt-6 flex justify-center">
+            <a
+              class="bg-laRed px-5 py-3 font-medium text-white sm:w-auto text-center"
+              href="/contacto"
+            >
+              ¿Quieres saber más?
+            </a>
+          </div>
+        </div>
+        <img class="aspect-square object-cover" src="/invitation.jpeg" alt="" />
+      </div>
     </section>
   </main>
 </Layout>

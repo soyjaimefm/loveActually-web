@@ -10,7 +10,7 @@ const { title, description } = Astro.props;
 ---
 
 <!doctype html>
-<html class="scroll-smooth" lang="es">
+<html class="scroll-smooth antialiased" lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Love Actually - Creamos la web de vuestra boda a medida" />
@@ -29,6 +29,10 @@ const { title, description } = Astro.props;
 <style is:global>
   html {
     font-family: "RoxboroughCF", system-ui, sans-serif;
+  }
+
+  h1,h2,h3,h4 {
+    font-family: AlNevrada;
   }
 
   @font-face {
