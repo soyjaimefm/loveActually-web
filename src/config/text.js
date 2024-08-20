@@ -5,11 +5,11 @@ const text = {
   section1: {
     feature1: {
       title: "PERSONALIZADA",
-      text: "En LOVE ACTUALLY entendemos que cada pareja y cada historia es única. Por eso, la web de su boda también debe serlo. Nos dedicamos a crear diseños completamente personalizados que reflejen vuestra forma de ser. Desde las formas y colores hasta los detalles más pequeños, cada elemento de la web estará hecho a medida para vosotros."
+      text: "En LOVE ACTUALLY entendemos que cada pareja y cada historia es única. Por eso, la web de vuestra boda también debe serlo. Nos dedicamos a crear diseños completamente personalizados que reflejen vuestra forma de ser. Desde las formas y colores hasta los detalles más pequeños, cada elemento de la web estará hecho a medida para vosotros."
     },
     feature2: {
       title: "FUNCIONAL",
-      text: "Vuestra web destacará por su diseño, pero sobre todo será muy práctica, intuitiva y funcional. Queremos ayudarte a organizar vuestra boda, por eso integramos herramientas para gestionar invitados, añadimos mapas, horarios detallados… Infórmate de todos los servicios que podemos incluir en la web para mantener todo bajo control."
+      text: "Vuestra web destacará por su diseño, pero sobre todo será muy práctica, intuitiva y funcional. Queremos ayudaros a organizar vuestra boda, por eso integramos herramientas para gestionar invitados, añadimos mapas, horarios detallados… Infórmate de todos los servicios que podemos incluir en la web para mantener todo bajo control."
     },
     feature3: {
       title: "EMOCIONANTE",
