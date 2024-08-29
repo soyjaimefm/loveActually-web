@@ -1,0 +1,15 @@
+---
+import LaH3 from "./ui/LaH3.astro";
+
+interface Props {
+  title: string;
+  text: string;
+}
+
+const { title, text } = Astro.props;
+---
+
+<article class="p-4 my-4 bg-laBeige">
+  <LaH3>{title}</LaH3>
+  <p>{text}</p>
+</article>
