@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import LaH1 from "../components/ui/LaH1.astro";
 import Review from "../components/Review.astro";
+import { reviewsText } from "../config/text";
 ---
 
 <Layout
@@ -12,10 +13,11 @@ import Review from "../components/Review.astro";
     <section class="container max-w-6xl px-8 py-12 mx-auto bg-gray-50">
       <LaH1 class="mb-6 text-center text-laOrange">Testimonios</LaH1>
       <div class="max-w-2xl mx-auto">
-        <Review
-          title="Cris y Manu"
-          text="Mil GRACIAS de verdad por la web. No os podéis imaginar lo que nos está facilitando la vida… si tuviéramos que confirmar y preguntar a todos uno por uno… nos da algo… Desde que nos hicisteis la web no paramos de recomendarlo a futuras parejas. Es un gusto trabajar con personas así."
-        />
+        {
+          reviewsText.map((review) => (
+            <Review {...review} />
+          ))
+        }
       </div>
     </section>
   </main>

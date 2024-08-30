@@ -53,6 +53,29 @@ const qaText = [
     question: `¿LA WEB SEGUIRÁ ACTIVA DESPUÉS DE LA BODA?`,
     answer: `Esta será una de las preguntas que os haremos cuando hablemos, es a vuestra elección.`
   }
-]
+];
 
-export {text, qaText};
+const reviewsText = [
+  {
+    title: 'Cris y Manu',
+    text: 'Mil GRACIAS de verdad por la web. No os podéis imaginar lo que nos está facilitando la vida… si tuviéramos que confirmar y preguntar a todos uno por uno… nos da algo… Desde que nos hicisteis la web no paramos de recomendarlo a futuras parejas. Es un gusto trabajar con personas así.'
+  },
+  {
+    title: 'María y Andrés',
+    text: '¡No podemos estar más felices con Love Actually! Desde el primer contacto, entendieron perfectamente lo que queríamos para nuestra boda: algo bonito, sencillo y que reflejara nuestra personalidad. La web que nos hicieron fue un éxito total. Todo fue súper personalizado y con detalles que jamás hubiéramos imaginado. ¡Mil gracias por hacer nuestro día aún más especial!'
+  },
+  {
+    title: 'Paula y Jorge',
+    text: 'Recomendamos a Love Actually con los ojos cerrados. No solo crearon una web ideal para nuestra boda, sino que hicieron todo tan fácil y divertido. El equipo ha sido súper amable, atento y se nota que les encanta lo que hacen. Si te casas, ni lo dudes: ¡Love Actually es la elección perfecta!'
+  },
+  {
+    title: 'Carla y David',
+    text: 'Si estás pensando en casarte, deja que Love Actually se encargue de tu web e invitaciones. Nos enamoramos del diseño desde el primer momento. Hasta nuestros invitados internacionales pudieron ver la info en su idioma, ¡todo un detallazo! Gracias por ayudarnos a transmitir nuestra historia de amor de una manera tan única y especial.'
+  },
+  // {
+  //   title: 'Sofía y Alex',
+  //   text: 'Love Actually salvó nuestras vidas en el caos de la planificación de la boda. No teníamos ni idea de por dónde empezar con las invitaciones y la web, pero ellos lo pusieron muy fácil. Además, fue muy práctico poder gestionar todo en un solo lugar y ahorrarnos mil dolores de cabeza. ¡Mil gracias, equipo, por hacer todo con tanto amor y dedicación!'
+  // }
+];
+
+export { text, qaText, reviewsText };
