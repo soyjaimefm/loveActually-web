@@ -47,7 +47,7 @@ const qaText = [
   },
   {
     question: `¿CUÁLES SON VUESTRAS TARIFAS?`,
-    answer: `Al igual que cada web y proyecto es personalizada para cada pareja, el precio también debe serlo. Podemos hacer webs a partir de 350 euros, ¡preguntadnos sin ningún compromiso!`
+    answer: `Al igual que cada web y proyecto es personalizada para cada pareja, el precio también debe serlo. Podemos hacer webs a partir de 400 euros, ¡preguntadnos sin ningún compromiso!`
   },
   {
     question: `¿LA WEB SEGUIRÁ ACTIVA DESPUÉS DE LA BODA?`,
